@@ -140,6 +140,7 @@ Add images and other contents using CSS record a screenshot of it.
 </html>
 #Output:
 
+![image](https://user-images.githubusercontent.com/119389139/214844875-94bb7e0a-76b0-4c2f-a7a9-b2203ece5282.png)
 
 
 #Result:

@@ -3,145 +3,120 @@
 To develop a website to display details about the places around my house.
 # Design steps
 Step 1:
+
 Create a new Django project and app.
 
 Step 2:
+
 Create a static file directory and mention the changes in settings.
 
 Step 3:
+
 Make a new folder templates inside your app and create a html and map them using views and url.
 
 Step 4:
+
 Write down the code for book cover using HTML and CSS.
 
 Step 5:
+
 Add images and other contents using CSS record a screenshot of it.
-#program:
-```
+
+output
+
+![214863032-c6ce958c-3557-4f31-a29f-20540cd3a0a8](https://user-images.githubusercontent.com/119389139/215129739-f9d36304-7c36-415a-8ab2-d85161e8faf4.png)
+
+Code:
+
+HTML:
+~~~
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-         <meta name="viewport" 
-         content="width=device-width, initial-scale=1.0">
-         <style>
-
-        .bookpage{
-            width: 400px;
-            height: 600px;
-            background-color: #3d3a3a;
-            color:white;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-image: url(/static/images/wave2.png);
-            background-size:600px;
-        }
-            
-
-        .toptext{
-            color:white;
-
-        }
-
-        
-        .tophr{
-            width:140px;
-        }
-        .author{
-            color: goldenrod;
-            display: inline;
-            position: relative;
-            color:lightgoldenrodyellow;
-            top:190px;
-            
-            font-family:Georgia;
-            font-size: medium;
-        }
-        .booktitle{
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: larger;
-            text-align: center;
-            position: relative;
-            top: 30px;
-        
-        }
-        .id {
-            width:400px;
-            position: relative;
-            top:180px;
-            
-        }
-        .publisher{
-            font-size: medium;
-            position: relative;
-            top:155px;
-            left:330px;
-        }
-        .edition{
-            color:orange;
-            font-size: medium;
-            font-family: Verdana;
-            position:relative;
-            top:85px;
-
-        }
-        .subtitle{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: large;
-            position: relative;
-            top:40px;
-            color:whitesmoke;
-        }
-        .photo{
-            position: relative;
-            top: 135px;
-            left: 260px;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-        }
-        </style>
-        <title>Book Cover Page</title>
+        <title>Web Development Technologies</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
     </head>
     <body>
-        <div class="bookpage">
-            <div class="toptext">
-                EXPERT INSIGHT
-            </div>
-            <div class="tophr">
-                <hr style="color: orange;">
-            </div>
-            <div class="booktitle">
-                <h1>Responsive Web Design With HTML5 and CSS</h1></div>
-            <div class="subtitle">
-                Develop future-proof  responsive  websites  using  the  latest  HTML5  and  CSS  Techniques
-            </div>
-            <div>
-        
-            <div class="photo">
-                <img src="/static/images/img.jpg" width="130" height="145" alt="ben">
-            </div>
-            <div class="id">
-                <hr style="color: orange;">
-            </div>
-            <div class="author">
-               <p><b>Sirisha</b></p>
-            </div>
-            <div class="publisher">
-                Packt>
-            </div>
-            <div class="edition">
-                <b>THIRD EDITION</b>
-            </div>
-            
-        </div>
+        <section class="book">
+            <br><br>
+        <span id="top">EXPERT INSIGHT &nbsp;&nbsp;&nbsp;</span>
+            <h1>Responsive Web Design with HTML5 and CSS</h1>
+            <h4>Develop future-proof responsive websites using the latest HTML5 and CSS techniques</h4>
+            <h3>Third Edition</h3>
+            <footer>
+                <div id="HASH" class="blue-msg">
+                    <span>Ben Frain</span>
+                    <span id="end"><u>Packt></u></span>
+                </div>
+            </footer>
+    </section>
     </body>
 </html>
-#Output:
+~~~
 
-![image](https://user-images.githubusercontent.com/119389139/214844875-94bb7e0a-76b0-4c2f-a7a9-b2203ece5282.png)
+CSS:
+~~~
+body{
+    color:rgb(255, 255, 255);
+    font-family: Helvetica, sans-serif;
+    background-color: #333
+}
 
-
+.book{
+    width: 726px;
+    height:891px;
+    background-color:rgb(0, 0, 0);
+    margin:auto;
+    position: relative;
+    background-image: url('https://th.bing.com/th/id/R.671f161d141466cdcf83db28cb0f3a9c?rik=chK%2bVFNfy9d5yQ&riu=http%3a%2f%2fwww.textronic.com%2fblog%2fwp-content%2fuploads%2f2017%2f10%2fJARVIS.png&ehk=ZeD47puFibIuEgnTFLJ0EvR0pvMX2F4jcL4rRn2y4EU%3d&risl=1&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size:606px;
+    background-position: bottom 150px center;
+}
+h1{
+    font-size:70px;
+    margin:60px;
+    margin-bottom:0px;
+}
+h3{
+    margin:0px 0px 90px 60px;
+    position: absolute;
+    bottom:0px;
+    font-size: x-large;
+    color: #f47027;
+}
+h4{
+    font-size:20px;
+    margin:60px;
+   margin-top:10px;
+   width:430px;
+}
+#top{
+    border-bottom:2px solid #f47027;
+    padding:100px 0px 5px 30px;
+}
+footer{
+    position: absolute;
+    bottom: 0px;
+    border-top:2px solid #f47027;
+    padding-top:10px;
+    width:726px;
+}
+#HASH {
+    display: flex;
+    justify-content: space-between;
+}
+  #HASH span{
+    margin:10px 0px 20px 60px;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  #end{
+    padding-right:60px;
+  }
+  ~~~
 #Result:
+
 Successfully designed a website to display the cover page of the book "Responsive Web Design with HTML5 and CSS".
